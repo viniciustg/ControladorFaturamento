@@ -27,7 +27,7 @@ rabbitmq-server no docker
 ```bash
 docker run -d --hostname rabbit-server --name some-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 ```
-## Rodar a interface do rabbitmq em:
+## Rodar a interface do rabbitmq-server em:
 ```bash
 http://localhost:15672/
 ```
