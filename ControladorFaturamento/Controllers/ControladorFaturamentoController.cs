@@ -25,5 +25,23 @@ namespace ControladorFaturamento.Controllers
                 return new StatusCodeResult(500);
             }
         }
+
+        [Route("lote")]
+        public IActionResult ProcessarEmLote(FiltroFaturamento filtro)
+        {
+            try
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    new ControladorFaturamentoService().ProcessarFila(filtro);
+                }
+
+                return Ok(filtro);
+            }
+            catch (Exception ex)
+            {
+                return new StatusCodeResult(500);
+            }
+        }
     }
 }
